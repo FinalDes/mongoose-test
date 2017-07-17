@@ -12,7 +12,8 @@ install:
   - pip install ansible
   # Check ansible version
   - ansible --version
-  - ehco localhost > inventory
+  - echo localhost > inventory
 script:
   # Basic role syntax check
   - ansible-playbook provision/playbook.yml -i inventory --syntax-check
+cache: pip
