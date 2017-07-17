@@ -1,3 +1,5 @@
+os: linux
+dist: trusty
 # matrix:
 #   include:
     # - language: python
@@ -12,9 +14,9 @@ install:
   - pip install ansible
   # Check ansible version
   - ansible --version
-  - echo localhost > inventory
 script:
   - cd provision
+  - echo localhost > inventory
   - ansible-galaxy install -r requirements.yml
   - ansible-playbook playbook.yml -i inventory --syntax-check
 cache:
