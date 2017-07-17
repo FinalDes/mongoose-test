@@ -3,10 +3,10 @@
     # - language: python
 language: python
 python: 2.7
-addons:
-  apt:
-    packages:
-    - python-pip
+# addons:
+#   apt:
+#     packages:
+#     - python-pip
 install:
   # Install ansible
   - pip install ansible
@@ -14,6 +14,9 @@ install:
   - ansible --version
   - echo localhost > inventory
 script:
-  # Basic role syntax check
-  - ansible-playbook provision/playbook.yml -i inventory --syntax-check
-cache: pip
+  - cd provision
+  - ansible-galaxy install -r requirements.yml
+  - ansible-playbook playbook.yml -i inventory --syntax-check
+cache:
+  pip: true,
+  ccache: true
