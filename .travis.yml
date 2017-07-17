@@ -1,0 +1,18 @@
+# matrix:
+#   include:
+    # - language: python
+language: python
+python: 2.7
+addons:
+  apt:
+    packages:
+    - python-pip
+install:
+  # Install ansible
+  - pip install ansible
+  # Check ansible version
+  - ansible --version
+  - ehco localhost > inventory
+script:
+  # Basic role syntax check
+  - ansible-playbook provision/playbook.yml -i inventory --syntax-check
