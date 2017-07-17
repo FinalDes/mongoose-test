@@ -4,5 +4,9 @@
   "main": "index.js",
   "repository": "git@github.com:FinalDes/mongoose-test.git",
   "author": "Alex Alonso <alex4551@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "mongoose": "^4.11.3"
+  },
+  "devDependencies": {}
 }
