@@ -6,7 +6,7 @@
   "author": "Alex Alonso <alex4551@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "mongoose": "^5.0.0"
+    "mongoose": "^5.9.3"
   },
   "devDependencies": {}
 }
